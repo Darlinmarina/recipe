@@ -1,0 +1,79 @@
+/* Variables */
+:root {
+    --orange: #eb5428;
+}
+
+/* Mobile First Styles */
+menu {
+    list-style: none;
+}
+
+header {
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+    text-align: center;
+    background-color: white;
+    color: black;
+    width: 100%;
+    box-shadow: 0 4px 4px -4px gray;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+}
+
+#header-logo {
+    background-color: var(--orange);
+}
+
+#header-navlist {
+    display: none;
+}
+
+#header-search {
+    display: none;
+}
+
+/* search button */
+label {
+    display: block;
+    font:
+      1rem 'Fira Sans',
+      sans-serif;
+}
+
+#taco-image {
+    width: 100%;
+}
+
+#taco-cheese {
+    width: 100%;
+}
+
+input, label {
+    margin: 0.4rem 0;
+}
+
+h1{
+    font-family: Bebas Neue;
+    font-size: 40px;
+}
+
+h2{
+    font-family: Bebas Neue;
+    font-size: 30px;
+}
+
+h3{
+    font-family: Bebas Neue;
+    font-size: 25px;
+}
+
+p, li{
+    font-family: Montserrat;
+    font-size: 16px;
+}
+
+nav a, footer{
+    font-family: Bebas Neue;
+    font-size: 20px;
+}
