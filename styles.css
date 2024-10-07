@@ -1,17 +1,43 @@
+/* CSS Resets */
+body {
+    margin: 0;
+}
+
+menu, ul {
+    padding: 0;
+}
+
+menu li{
+    list-style-type: none;
+}
+
+button {
+    background: none;
+	color: var(--orange);
+	border: none;
+	padding: 0;
+	font-family: Bebas Neue;
+    font-size: 20px;
+	cursor: pointer;
+	outline: inherit;
+}
+
 /* Variables */
 :root {
     --orange: #eb5428;
 }
 
 /* Mobile First Styles */
-menu {
-    list-style: none;
+main {
+    padding: 30px 0;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 header {
-    /* position: fixed;
-    top: 0;
-    left: 0; */
     text-align: center;
     background-color: white;
     color: black;
@@ -19,6 +45,17 @@ header {
     box-shadow: 0 4px 4px -4px gray;
     display: grid;
     grid-template-columns: 25% 50% 25%;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+header h3 {
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+header svg {
+    margin-top: 12px;
 }
 
 #header-logo {
@@ -29,17 +66,43 @@ header {
     display: none;
 }
 
-#header-search {
+#medium-header-search {
     display: none;
 }
 
-/* search button */
-label {
-    display: block;
-    font:
-      1rem 'Fira Sans',
-      sans-serif;
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.search-bar input {
+    padding: 12px 6px;
+    border: 2px solid var(--orange);
+    width: 275px;
+}
+
+.search-bar button {
+    background-color: var(--orange);
+    height: 43px;
+    padding: 0 8px;
+}
+
+
+menu ul {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+menu button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 
 #taco-image {
     width: 100%;
@@ -56,6 +119,7 @@ input, label {
 h1{
     font-family: Bebas Neue;
     font-size: 40px;
+    text-align: center;
 }
 
 h2{
@@ -77,3 +141,4 @@ nav a, footer{
     font-family: Bebas Neue;
     font-size: 20px;
 }
+
