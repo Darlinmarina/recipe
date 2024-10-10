@@ -32,6 +32,7 @@ button {
 /* Variables */
 :root {
     --orange: #eb5428;
+    --blue: #7ABFBF;
 }
 
 /* Mobile First Styles */
@@ -45,14 +46,20 @@ main {
 }
 
 header {
-    text-align: center;
     background-color: white;
     color: black;
     width: 100%;
-    box-shadow: 0 4px 4px -4px gray;
+    box-shadow: 0 4px 4px -3px gray;
+    text-align: center;
+}
+
+#large-food-links {
+    display: none;
+}
+
+#header-container-1 {
     display: grid;
     grid-template-columns: 25% 50% 25%;
-    padding-left: 6px;
     padding-right: 6px;
 }
 
@@ -73,7 +80,11 @@ header svg {
     display: none;
 }
 
-#medium-header-search {
+#medium-header-searchbar {
+    display: none;
+}
+
+#food-links {
     display: none;
 }
 
@@ -119,6 +130,7 @@ menu button {
 
 #taco-image {
     width: 100%;
+    margin-bottom: 8px;
 }
 
 #details-section dl {
@@ -154,12 +166,15 @@ menu button {
     line-height: 20px;
 }
 
-#side-dishes-section{
+#side-dishes-section {
     background: #7ABFBF;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
     padding-top: 4px;
     border-bottom: 24px solid rgb(235, 235, 235);
+}
+
+#side-dishes-grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
 }
 
 .side-dish {
@@ -244,3 +259,271 @@ dt {
     font-weight: bold;
 }
 
+/* Medium Size Screen (>=768px) */
+@media only screen and (min-width: 768px) {
+    #header-container-1 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #header-container-2 {
+        display: flex;
+        gap: 32px;
+    }
+
+    #hamburger-header {
+        display: none;
+    }
+
+    #medium-header-searchbar {
+        display: flex;
+    }
+
+    #small-large-searchbar {
+        display: none;
+    }
+
+
+    #header-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    #header-logo > svg {
+        width: 75px;
+        height: 75px;
+    }
+
+    .search-bar {
+        margin-bottom: 0;
+    }
+
+    .search-bar svg {
+        margin: 0;
+    }
+
+    #sign-in {
+        margin-right: 16px;
+    }
+
+    h3 > span {
+        display: none;
+    }
+
+    button > span {
+        display: none;
+    }
+
+    #header-navlist {
+        display: flex;
+    }
+
+    #food-links {
+        display: block;
+    }
+
+    #food-links ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        padding-bottom: 16px; 
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-bottom: 1px;
+    }
+    
+    #food-links a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--orange);
+    }
+
+    #food-links img {
+        height: 80px;
+        width: 80px;
+    }
+    
+    main {
+        background-color: rgb(248, 248, 248);
+        padding-top: 15px;
+    }
+
+    h1 {
+        text-align: left;
+        margin-left: 16px;
+    }
+
+    menu ul {
+        justify-content: center;
+        gap: 120px;
+    }
+
+    #details-section dl {
+        justify-content: center;
+    }
+
+    #details-section dd {
+        margin-left: 16px;
+    }
+
+    #ingredients-directions-section {
+        display: grid;
+        grid-template-columns: 25% 75%;
+    }
+
+    #side-dishes-section {
+        border: none;
+    }
+    #side-dishes-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .side-dish {
+        margin-left: 0;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+    }
+
+    #social-links ul {
+        gap: 32px;
+    }
+}
+
+
+/* Medium Size Screen (>=1280px) */
+@media only screen and (min-width: 1280px) {
+    #medium-header-searchbar {
+        display: none;
+    }
+
+    #small-large-searchbar {
+        display: flex;
+        margin-top: 32px;
+    }
+
+    #header-logo {
+        height: 150px;
+        width: 150px;
+    }
+    
+    #header-logo svg {
+        height: 100px;
+        width: 100px;
+        margin-top: 24px;
+        margin-right: 8px;
+    }
+
+    #food-links {
+        display: none;
+    }
+
+    #large-food-links {
+        display: block;
+    }
+
+    #large-food-links ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        gap: 48px;
+        padding-bottom: 16px; 
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-bottom: 1px;
+    }
+
+    #large-food-links a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--orange);
+    }
+
+    #large-food-links img {
+        height: 80px;
+        width: 80px;
+    }
+
+    #sign-in {
+        margin-top: 18px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    #street-taco-container {
+        display: grid;
+        grid-template-columns: 10% 40% 50%;
+    }
+
+    #street-taco-text {
+        margin-left: 12px;
+        margin-right: 12px;
+        line-height: 28px;
+    }
+
+    menu {
+        border: 2px solid var(--orange);
+        margin-top: 0;
+        padding-top: 24px;
+    }
+
+    menu ul {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+
+    #details-section {
+        background-color: black;
+        color: var(--blue);
+        padding-bottom: 8px;
+    }
+
+    #details-section > div {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        text-align: center;
+    }
+
+    #details-section dl {
+        display: grid;
+        margin: 0;
+    }
+
+    #details-section dd {
+        margin: 0;
+    }
+
+    #side-dishes-grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+    }
+
+    .side-dish {
+        flex-direction: column;
+    }
+
+    .side-dish img {
+        height: 250px;
+        width: 250px;
+    }
+
+    #taco-cheese-container {
+        align-items: flex-start;
+        flex-direction: row;
+    }
+
+    footer {
+        justify-content: space-between;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
