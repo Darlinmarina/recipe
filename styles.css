@@ -40,9 +40,8 @@ main {
     padding: 30px 0;
 }
 
-.container {
-    padding-left: 15px;
-    padding-right: 15px;
+p,li {
+    line-height: 28px;
 }
 
 header {
@@ -131,6 +130,21 @@ menu button {
 #taco-image {
     width: 100%;
     margin-bottom: 8px;
+}
+
+#street-taco-text {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#details-section {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#ingredients-directions-section {
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 #details-section dl {
@@ -373,6 +387,10 @@ dt {
         grid-template-columns: 25% 75%;
     }
 
+    #directions {
+        margin-left: 16px;
+    }
+
     #side-dishes-section {
         border: none;
     }
@@ -393,10 +411,14 @@ dt {
     #social-links ul {
         gap: 32px;
     }
+
+    #taco-cheese-container p {
+        line-height: 20px;
+    }
 }
 
 
-/* Medium Size Screen (>=1280px) */
+/* Large Size Screen (>=1280px) */
 @media only screen and (min-width: 1280px) {
     #medium-header-searchbar {
         display: none;
@@ -463,10 +485,17 @@ dt {
         grid-template-columns: 10% 40% 50%;
     }
 
+    menu {
+        margin-bottom: 0;
+    }
+
+    #taco-image {
+        margin-bottom: 0;
+    }
+
     #street-taco-text {
         margin-left: 12px;
         margin-right: 12px;
-        line-height: 28px;
     }
 
     menu {
@@ -521,9 +550,13 @@ dt {
         flex-direction: row;
     }
 
+    #social-links ul {
+        gap: 90px;
+    }
+
     footer {
         justify-content: space-between;
         padding-left: 8px;
-        padding-right: 8px;
+        padding-right: 24px;
     }
 }
